@@ -51,8 +51,7 @@ namespace Fido_Main.Notification.Email
             {
                 var mMessage = new MailMessage();
 
-               if (SetupEmailMessage(sTo, sCC, sFrom, sSubject, sBody, lGaugeAttachment, sEmailAttachment, sErrorEmail,
-                    sFidoEmail, out mMessage))
+               if (SetupEmailMessage(email, out mMessage))
                 {
                     SendEmail(mMessage);
                 }
