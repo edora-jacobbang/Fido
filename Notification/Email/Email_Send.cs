@@ -65,8 +65,7 @@ namespace Fido_Main.Notification.Email
             }
         }
 
-        private static bool SetupEmailMessage(string sTo, string sCC, string sFrom, string sSubject, string sBody,
-            List<string> lGaugeAttachment, string sEmailAttachment, string sErrorEmail, string sFidoEmail, out MailMessage mMessage)
+        private static bool SetupEmailMessage(Email email, out MailMessage mMessage)
         {
             if (!string.IsNullOrEmpty(sTo))
             {
